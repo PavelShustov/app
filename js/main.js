@@ -8,7 +8,12 @@ $(function(){
         $('.popup-container').css('display', 'none');
     };
 
-    $('.close').on('click', function(){
-               closePopup();
+    let clearForm = function(){
+        $('.popup-container > input[type="text"]').val('');
+    };
+
+     $('.close').on('click', function(){
+        clearForm();
+        closePopup();
     });
 });
